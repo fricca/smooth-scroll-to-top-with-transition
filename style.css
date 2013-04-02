@@ -1,0 +1,214 @@
+/**
+ * Styles for: Smooth scroll to top with CSS transition
+ * just cosmetic, not needed
+ *
+ * Author: Corina Rudel
+ * Date: 130328
+ * Version: 1.0
+ */
+
+/*
+ * General settings
+ */
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	min-height: 120%; /* there should always be somthing to scroll in this demo */
+}
+
+body {
+	font:100%/1.5 Arial, sans-serif;
+	color: #333;
+	background: #f2f2f2; 
+}
+
+h1 {
+	font-size: 200%;
+	font-weight: normal;
+	letter-spacing: -1px;
+	text-align: center;
+	margin: 1em 0 2em;
+	padding: 0 .5em;
+	background: #fff;
+}
+
+h2 {
+	font-size: 150%;
+	font-weight: normal;
+	text-shadow: 1px 1px #fff;
+	margin:1em 0 .66em;
+	border-bottom: 2px dotted #999;
+}
+
+h3 {
+	font-size: 100%;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #000;
+	text-shadow: 1px 1px #fff;
+	margin: 1em 0 .5em;
+}
+
+h4 {
+	font-size: 100%;
+	font-weight: bold;
+	margin: .5em 0 0;
+}
+
+a {
+	color: #d11706;
+}
+
+a:hover {
+	color: #000;
+}
+
+a:visited {
+	color: inherit;
+}
+
+p {
+	margin:0 0 1em;
+}
+
+ol,
+ul {
+	margin: 0 0 1em 1.25em;
+	padding: 0;
+}
+
+li ol,
+li ul {
+	margin-left: .75em;
+}
+
+li {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style: square;
+}
+
+ol {
+	list-style: decimal;
+}
+
+ol.caps {
+	list-style:upper-latin;
+}
+
+ol.code {
+	list-style:none;
+	margin-left: 0;
+	padding: .5em;
+	background: #fff;
+	border: 1px solid #ccc;
+	box-shadow: inset 2px 2px 8px #eee;
+}
+
+.code li {
+	border-top: 1px dotted #666;
+}
+
+.code li:first-child {
+	border-top: none;
+}
+
+.success li:after{
+	content: "\20\2714";
+	color: #1dbc14;
+}
+
+
+dl {
+	margin: 0 0 1em;
+}
+
+dt {
+	font-weight: bold;
+	font-style: normal;
+}
+
+dd {
+	margin: 0;
+	padding: 0;
+}
+dd + dt {
+	margin-top: 1em;
+}
+
+code {
+	font-family: Consolas, Monaco, 'Courier New', monospace;
+	font-size: 100%;
+	color: #000;
+	white-space: pre-wrap;
+}
+
+.code .comment {
+	color: #999;
+	font-style: italic;
+}
+
+small {
+	font-size: 81.25%;
+}
+
+.note {
+	font-style: italic;
+}
+
+.button {
+	display: inline-block;
+	padding: .25em .5em;
+	margin: 0 1em;
+	background: #d11706;
+	background: rgba(209, 23, 6, .5);
+	color: #eee;
+	font-weight: normal;
+	text-decoration: none;
+	border-radius: .75em;
+	box-shadow: 0 0 8px #999;
+}
+
+.button:hover {
+	color: #fff;
+	background: rgb(209, 23, 6);
+}
+
+#page {
+	padding: 1em;
+	max-width: 50em;
+	margin: 0 auto;
+}
+
+/*
+ * A11y
+ */
+
+.acc-hidden {
+	position: absolute;
+	left: -999px;
+	top: -999px;
+}
+
+/*
+ * Example 2: multiple custom links
+ */
+
+.toplink {
+	float: right;
+	margin:0 0 1em 1em;
+}
+
+.toplink:after {
+	content: ' ↑';
+}
+
+
