@@ -113,7 +113,7 @@ Use several custom links, p.e. links that have <code>class="toplink"</code>
 ```html
 	<script>
 		scrollToTop({
-			linkName: '.toplink',
+			linkName: '.toplink'
 		});
 	</script>
 ```
