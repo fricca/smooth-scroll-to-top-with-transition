@@ -2,7 +2,7 @@
  * Smooth scroll to top with CSS transitions
  *
  * Author: Corina Rudel @friccaW
- * Version: 1.01
+ * Version: 1.02
  * Source: http://github.com/fricca/smooth-scroll-to-top-with-transition
  */
 
@@ -325,6 +325,7 @@ var scrollToTop = (function(w, d) {
 	function prepareLinks(links) {
 		var i,
 			ii,
+			top,
 			oneLink;
 
 		// for all links
@@ -336,8 +337,13 @@ var scrollToTop = (function(w, d) {
 		// If only one link and hiddenDistance is set
 		if(links.length === 1) {
 			MCC.addClass(links[0], data.singleClass);
+
+			top = w.pageYOffset || root.scrollTop;
 			if(settings.hiddenDistance > 0) {
 				oneLink = links[0];
+			}
+			// Inital hidden/visible class
+			if(top < settings.hiddenDistance) {
 				MCC.addClass(links[0], data.hiddenClass);
 			} else {
 				MCC.addClass(links[0], data.visibleClass);
