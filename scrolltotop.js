@@ -2,7 +2,7 @@
  * Smooth scroll to top with CSS transitions
  *
  * Author: Corina Rudel @friccaW
- * Version: 1.0
+ * Version: 1.01
  * Source: http://github.com/fricca/smooth-scroll-to-top-with-transition
  */
 
@@ -37,6 +37,7 @@ var scrollToTop = (function(w, d) {
 		target,
 		distance,
 		startedAnim,
+		scrollTimer,
 
 		/**
 		 * HELPER
@@ -276,7 +277,6 @@ var scrollToTop = (function(w, d) {
 	}
 
 	function checkScroll(link) {
-		var scrollTimer;
 
 		// check if there's an unfinished transition left
 		// might happen if the transionend event didn't fire
@@ -290,7 +290,9 @@ var scrollToTop = (function(w, d) {
 		// Check if toplink should be visible or hidden
 		if(link && settings.hiddenDistance) {
 			// check for scroll position every 100ms
-			w.clearTimeout(scrollTimer);
+			if(scrollTimer) {
+				clearTimeout(scrollTimer);
+			}
 			scrollTimer = setTimeout(function() {
 				var top = w.pageYOffset || root.scrollTop;
 				if(top >= settings.hiddenDistance) {
