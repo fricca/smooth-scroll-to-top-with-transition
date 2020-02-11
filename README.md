@@ -16,7 +16,7 @@ Flaws: The scrollbar behaviour seems a bit ... odd.
 
 ## Test Results
 
-###Working in:
+### Working in:
 
 * Desktop
 	* Chrome 25 (Win 7)
@@ -57,7 +57,7 @@ Flaws: The scrollbar behaviour seems a bit ... odd.
 * Mobile
     * Windows Phone 7.8 (Nokia Lumia 800) uses native smooth scrolling
 
-##Usage
+## Usage
 
 ### A. With defaults
 
